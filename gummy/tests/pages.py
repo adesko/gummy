@@ -70,8 +70,9 @@ class NewTopicPage(Page):
 
 class TopicViewPage(Page):
 
-    _first_message_locator = (By.CSS_SELECTOR, ".card.border-dark")
-
+    _first_post_locator = (By.CSS_SELECTOR, ".card.border-dark")
+    _first_post_subject_locator = (By.CSS_SELECTOR, ".card-header")
+    _first_post_message_locator = (By.CSS_SELECTOR, ".card-body p")
     _navbar_locator = (By.CSS_SELECTOR, "nav")
 
     @property
@@ -79,5 +80,5 @@ class TopicViewPage(Page):
         return self.is_element_displayed(*self._navbar_locator)
 
     def is_first_message_displayed(self):
-        return self.is_element_displayed(*self._first_message_locator)
+        return self.is_element_displayed(*self._first_post_locator)
 

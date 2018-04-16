@@ -139,4 +139,11 @@ class NewTopicTestsLoggedIn(StaticLiveServerTestCase):
         new_topic_page.find_element(*new_topic_page._post_button_locator).click()
         topic_view_page = TopicViewPage(self.selenium)
         topic_view_page.wait_for_page_to_load()
+        # Check that first message container is displayed
         self.assertTrue(topic_view_page.is_first_message_displayed())
+        # Check that entered before subject is displayed
+        self.assertEqual(topic_view_page.find_element(*topic_view_page._first_post_subject_locator).text,
+                         "Test Subject")
+        # Check that entered before message is displayed
+        self.assertEqual(topic_view_page.find_element(*topic_view_page._first_post_message_locator).text,
+                         "Test Message")

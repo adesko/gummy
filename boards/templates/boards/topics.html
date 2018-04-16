@@ -28,7 +28,7 @@
     {% url 'topic_posts' board.pk topic.pk as topic_url %}
     <tr>
         <td><p class="mb-0">
-                <a href="{{ topic_url }}">{{ topic.subject }}</a>
+                <a id="topic_{{ topic.pk }}"href="{{ topic_url }}">{{ topic.subject }}</a>
             </p>
             {% if topic.get_page_count > 1 %}
             <small class="text-muted">
