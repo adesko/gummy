@@ -44,8 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'widget_tweaks',
+    'django_jenkins',
 ]
 
+JENKINS_TASKS = ('django_jenkins.tasks.run_pep8',
+                 'django_jenkins.tasks.run_pyflakes',
+                 )
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -61,7 +65,7 @@ ROOT_URLCONF = 'gummy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

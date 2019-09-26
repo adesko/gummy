@@ -1,0 +1,12 @@
+boards\templatetags\gravatar.py:5: [E] PYFLAKES:'django.conf.settings' imported but unused
+boards\tests\test_view_edit_post.py:5: [E] PYFLAKES:'..views.PostUpdateView' imported but unused
+boards\tests\test_view_edit_post.py:35: [E] PYFLAKES:local variable 'user' is assigned to but never used
+boards\tests\test_view_new_topic.py:46: [E] PYFLAKES:local variable 'response' is assigned to but never used
+accounts\admin.py:1: [E] PYFLAKES:'django.contrib.admin' imported but unused
+accounts\models.py:1: [E] PYFLAKES:'django.db.models' imported but unused
+venv\lib\site-packages\django\contrib\messages\__init__.py:1: [E] PYFLAKES:'from django.contrib.messages.api import *' used; unable to detect undefined names
+venv\lib\site-packages\django\contrib\messages\__init__.py:1: [E] PYFLAKES:'django.contrib.messages.api.*' imported but unused
+venv\lib\site-packages\django\contrib\messages\__init__.py:2: [E] PYFLAKES:'from django.contrib.messages.constants import *' used; unable to detect undefined names
+venv\lib\site-packages\django\contrib\messages\__init__.py:2: [E] PYFLAKES:'django.contrib.messages.constants.*' imported but unused
+venv\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py:4: [E] PYFLAKES:'django.template.Variable' imported but unused
+venv\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py:143: [E] PYFLAKES:local variable 'tag_name' is assigned to but never used
